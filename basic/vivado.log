@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Feb  1 20:57:16 2021
+# Process ID: 4264
+# Current directory: D:/mig_ddr_fpga/basic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4884 D:\mig_ddr_fpga\basic\basic.xpr
+# Log file: D:/mig_ddr_fpga/basic/vivado.log
+# Journal file: D:/mig_ddr_fpga/basic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/mig_ddr_fpga/basic/basic.xpr
+INFO: [Project 1-313] Project file moved from 'E:/mig_ddr_fpga/basic' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 1146.215 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb  1 21:02:11 2021...
