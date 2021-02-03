@@ -1,9 +1,17 @@
 vlib modelsim_lib/work
 vlib modelsim_lib/msim
 
+vlib modelsim_lib/msim/xpm
 vlib modelsim_lib/msim/xil_defaultlib
 
+vmap xpm modelsim_lib/msim/xpm
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
+
+vlog -work xpm  -incr -sv \
+"E:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+
+vcom -work xpm  -93 \
+"E:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -incr \
 "../../../../basic.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v" \
@@ -73,7 +81,6 @@ vlog -work xil_defaultlib  -incr \
 "../../../../basic.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v" \
 "../../../../basic.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig_sim.v" \
 "../../../../basic.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.v" \
-
 
 vlog -work xil_defaultlib \
 "glbl.v"

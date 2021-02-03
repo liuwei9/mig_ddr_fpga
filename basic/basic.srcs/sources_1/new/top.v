@@ -38,7 +38,7 @@ module top(
     output [0:0]                 ddr3_odt,
     input                        sysclk_p,
     input                        sysclk_n,   
-    output                       tg_compare_error,
+    //output                       tg_compare_error,
     output                       init_calib_complete
     );
     
@@ -105,7 +105,7 @@ module top(
                 IDLE:begin
                     state <= WRITE;
                     //使用的开发板上搭载了4片Micron的DDR3 内存，共 2GB
-                    if(app_addr_begin >= 24'd16777210)
+                    //if(app_addr_begin >= 24'd16777210)
                         app_addr_begin <= 29'd0;
                     count <= 512'd0;                  
                 end
@@ -115,6 +115,19 @@ module top(
                     count <= (app_rdy && app_wdf_rdy) ? (count + 1'b1) : count;
                 end
                 WAIT:begin
+                    state <= READ;
+                    app_addr_begin <= 29'd0;
+                    count <= 512'd0;
+                end
+                READ:begin
+                    state <= (count == TEST_RANGE && app_rdy) ? IDLE : state;
+                    app_addr_begin <= app_rdy ? (app_addr_begin + 4'd8) : app_addr_begin;
+                    count <= app_rdy ? (count + 1'b1) : count;
+                end
+                default :begin
+                    state <= IDLE;
+                    app_addr_begin <= 29'd0;
+                    count <= 512'd0;
                 end
             endcase
         end
