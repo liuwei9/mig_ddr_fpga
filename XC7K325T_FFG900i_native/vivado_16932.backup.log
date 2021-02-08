@@ -1,0 +1,129 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  2 16:44:11 2021
+# Process ID: 16932
+# Current directory: D:/mig_ddr_fpga/basic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2848 D:\mig_ddr_fpga\basic\basic.xpr
+# Log file: D:/mig_ddr_fpga/basic/vivado.log
+# Journal file: D:/mig_ddr_fpga/basic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/mig_ddr_fpga/basic/basic.xpr
+INFO: [Project 1-313] Project file moved from 'E:/mig_ddr_fpga/basic' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1120.609 ; gain = 0.000
+update_compile_order -fileset sources_1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+set_property -dict [list CONFIG.ENABLE_CLOCK_MONITOR {false} CONFIG.PRIM_SOURCE {Global_buffer} CONFIG.PRIM_IN_FREQ {200.000} CONFIG.CLK_OUT1_PORT {clk_out200M} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.000} CONFIG.USE_RESET {false} CONFIG.PRIMITIVE {MMCM} CONFIG.CLKIN1_JITTER_PS {50.0} CONFIG.MMCM_CLKFBOUT_MULT_F {5.000} CONFIG.MMCM_CLKIN1_PERIOD {5.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.000} CONFIG.CLKOUT1_JITTER {98.146} CONFIG.CLKOUT1_PHASE_ERROR {89.971}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+generate_target all [get_files  d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 8
+[Tue Feb  2 19:56:10 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/mig_ddr_fpga/basic/basic.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/mig_ddr_fpga/basic/basic.ip_user_files/sim_scripts -ip_user_files_dir D:/mig_ddr_fpga/basic/basic.ip_user_files -ipstatic_source_dir D:/mig_ddr_fpga/basic/basic.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/modeltech64_10.4/vivado2020_1_lib} {questa=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/questa} {riviera=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/riviera} {activehdl=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run mig_7series_0_synth_1
+launch_runs mig_7series_0_synth_1
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mig_7series_0, cache-ID = b064ab5c9c1c3174; cache size = 37.290 MB.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci' is already up-to-date
+[Tue Feb  2 20:00:41 2021] Launched mig_7series_0_synth_1...
+Run output will be captured here: D:/mig_ddr_fpga/basic/basic.runs/mig_7series_0_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1554.703 ; gain = 164.039
+wait_on_run mig_7series_0_synth_1
+[Tue Feb  2 20:00:41 2021] Waiting for mig_7series_0_synth_1 to finish...
+[Tue Feb  2 20:00:46 2021] Waiting for mig_7series_0_synth_1 to finish...
+[Tue Feb  2 20:00:51 2021] Waiting for mig_7series_0_synth_1 to finish...
+[Tue Feb  2 20:00:56 2021] Waiting for mig_7series_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log mig_7series_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig_7series_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source mig_7series_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP mig_7series_0, cache-ID = b064ab5c9c1c3174.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 20:00:52 2021...
+[Tue Feb  2 20:00:56 2021] mig_7series_0_synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 1554.703 ; gain = 0.000
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1
+[Tue Feb  2 20:00:57 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/mig_ddr_fpga/basic/basic.runs/clk_wiz_0_synth_1/runme.log
+wait_on_run clk_wiz_0_synth_1
+[Tue Feb  2 20:00:57 2021] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Feb  2 20:01:02 2021] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Feb  2 20:01:07 2021] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Feb  2 20:01:12 2021] Waiting for clk_wiz_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log clk_wiz_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source clk_wiz_0.tcl -notrace
+Command: synth_design -top clk_wiz_0 -part xc7k325tffg900-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+WARNING: [Common 17-348] Failed to get the license for feature 'Synthesis' and/or device 'xc7k325t'. Explanation: The license feature Synthesis could not be found.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+0 Infos, 1 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xc7k325t'. Please run the Vivado License Manager for assistance in determining
+which features and devices are licensed for your system.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Please note that Vivado 2017.3 and later requires upgrading your license server tools to the Flex 11.14.1 tools. Please confirm with your license admin that the correct version of the license server tools are installed.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 20:01:07 2021...
+[Tue Feb  2 20:01:12 2021] clk_wiz_0_synth_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'clk_wiz_0_synth_1'
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 1554.703 ; gain = 0.000
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7k325tffg900-2
+Top: top
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+1 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Runs 36-527] DCP does not exist: d:/mig_ddr_fpga/basic/basic.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
+generate_target all [get_files  d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 8
+[Tue Feb  2 20:02:47 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/mig_ddr_fpga/basic/basic.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/mig_ddr_fpga/basic/basic.ip_user_files/sim_scripts -ip_user_files_dir D:/mig_ddr_fpga/basic/basic.ip_user_files -ipstatic_source_dir D:/mig_ddr_fpga/basic/basic.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/modeltech64_10.4/vivado2020_1_lib} {questa=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/questa} {riviera=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/riviera} {activehdl=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 8
+[Tue Feb  2 20:06:27 2021] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/mig_ddr_fpga/basic/basic.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/mig_ddr_fpga/basic/basic.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/mig_ddr_fpga/basic/basic.ip_user_files/sim_scripts -ip_user_files_dir D:/mig_ddr_fpga/basic/basic.ip_user_files -ipstatic_source_dir D:/mig_ddr_fpga/basic/basic.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/modeltech64_10.4/vivado2020_1_lib} {questa=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/questa} {riviera=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/riviera} {activehdl=D:/mig_ddr_fpga/basic/basic.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 21:42:42 2021...
