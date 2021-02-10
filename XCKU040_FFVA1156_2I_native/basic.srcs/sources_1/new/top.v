@@ -70,11 +70,48 @@ reg [1:0] state;
 reg [DATA_WIDTH - 1'b1 : 0] data;
 reg [ADDR_WIDTH - 1'b1 : 0] addr;
 
-assign  c0_ddr4_app_cmd = (state == WRITE) ? CMD_WRITE : CMD_READ;
+assign c0_ddr4_app_cmd = (state == WRITE) ? CMD_WRITE : CMD_READ;
 assign c0_ddr4_app_en = (state == WRITE) ? (c0_ddr4_app_wdf_rdy & c0_ddr4_app_rdy) : ((state == READ) & c0_ddr4_app_rdy);
+assign c0_ddr4_app_wdf_wren = (state == WRITE) ? (c0_ddr4_app_wdf_rdy & c0_ddr4_app_rdy) : 1'b0;
 assign c0_ddr4_app_wdf_end = c0_ddr4_app_wdf_wren;
+assign c0_ddr4_app_addr = addr;
+assign c0_ddr4_app_wdf_data = data;
 
+localparam TEST_DATA_RANGE = 10'd1000;
 
+always @(posedge c0_ddr4_ui_clk) begin
+	if (c0_ddr4_ui_clk_sync_rst | !c0_init_calib_complete) begin
+		// reset
+		state <= IDLE;
+		data <= 512'd0;
+		addr <= 28'd0;
+		
+	end
+	else begin
+		case (state)
+			IDLE:begin
+				state <= WRITE;
+				addr <= 28'd0;
+				data <= 512'd0;
+			end
+			WRITE:begin
+				state <= (TEST_DATA_RANGE == data && c0_ddr4_app_wdf_rdy && c0_ddr4_app_rdy) ? WAIT : state;
+				addr <= (c0_ddr4_app_wdf_rdy & c0_ddr4_app_rdy) ? (addr + 4'd8) : addr;
+				data <= (c0_ddr4_app_rdy & c0_ddr4_app_wdf_rdy) ? (data + 1'b1) : data;
+			end
+			WAIT:begin
+				state <= READ;
+				addr <= 28'd0;
+				data <= 512'd0;
+			end
+			READ:begin
+				state <=(TEST_DATA_RANGE == data && c0_ddr4_app_rdy) ? IDLE : state;
+				addr <= (c0_ddr4_app_rdy) ? (addr + 4'd8) : addr;
+				data <= (c0_ddr4_app_rdy) ? (data + 1'b1) : data;
+			end
+		endcase
+	end
+end
 
 
     ddr4_0 ddr4_inst (

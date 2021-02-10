@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="arch_package" />
+            <top_module name="glbl" />
+            <top_module name="proj_package" />
+            <top_module name="sim_tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="10055376fs"></ZoomStartTime>
+      <ZoomEndTime time="33988925fs"></ZoomEndTime>
+      <Cursor1Time time="30000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="251"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="61" />
+   <wvobject fp_name="/sim_tb_top/sys_clk_i" type="logic">
+      <obj_property name="ElementShortName">sys_clk_i</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/sys_rst" type="logic">
+      <obj_property name="ElementShortName">sys_rst</obj_property>
+      <obj_property name="ObjectShortName">sys_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_sys_clk_p" type="logic">
+      <obj_property name="ElementShortName">c0_sys_clk_p</obj_property>
+      <obj_property name="ObjectShortName">c0_sys_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_sys_clk_n" type="logic">
+      <obj_property name="ElementShortName">c0_sys_clk_n</obj_property>
+      <obj_property name="ObjectShortName">c0_sys_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_adr_sdram" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_adr_sdram[1:0][16:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_adr_sdram[1:0][16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_ba_sdram" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_ba_sdram[1:0][1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ba_sdram[1:0][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_bg_sdram" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_bg_sdram[1:0][0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_bg_sdram[1:0][0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_act_n" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_act_n</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_act_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_adr" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_adr[16:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_adr[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_ba" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_ba[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ba[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_bg" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_bg[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_bg[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_cke" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_cke[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_cke[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_odt" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_odt[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_odt[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_cs_n" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_cs_n[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_cs_n[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_ck_t_int" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_ck_t_int[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ck_t_int[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_ck_c_int" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_ck_c_int[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ck_c_int[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_ck_t" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_ck_t</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ck_t</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_ck_c" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_ck_c</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ck_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_reset_n" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_reset_n</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_dm_dbi_n" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_dm_dbi_n[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_dm_dbi_n[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_dq" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_dq[63:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_dq[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_dqs_c" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_dqs_c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_dqs_c[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_ddr4_dqs_t" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_dqs_t[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_dqs_t[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_init_calib_complete" type="logic">
+      <obj_property name="ElementShortName">c0_init_calib_complete</obj_property>
+      <obj_property name="ObjectShortName">c0_init_calib_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/c0_data_compare_error" type="logic">
+      <obj_property name="ElementShortName">c0_data_compare_error</obj_property>
+      <obj_property name="ObjectShortName">c0_data_compare_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/cmdName" type="array">
+      <obj_property name="ElementShortName">cmdName[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cmdName[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/en_model" type="logic">
+      <obj_property name="ElementShortName">en_model</obj_property>
+      <obj_property name="ObjectShortName">en_model</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/model_enable" type="logic">
+      <obj_property name="ElementShortName">model_enable</obj_property>
+      <obj_property name="ObjectShortName">model_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/DDR4_ADRMOD" type="array">
+      <obj_property name="ElementShortName">DDR4_ADRMOD[0:0][16:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR4_ADRMOD[0:0][16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/ADDR_WIDTH" type="array">
+      <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/DQ_WIDTH" type="array">
+      <obj_property name="ElementShortName">DQ_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DQ_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/DQS_WIDTH" type="array">
+      <obj_property name="ElementShortName">DQS_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DQS_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/DM_WIDTH" type="array">
+      <obj_property name="ElementShortName">DM_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DM_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/DRAM_WIDTH" type="array">
+      <obj_property name="ElementShortName">DRAM_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DRAM_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/tCK" type="array">
+      <obj_property name="ElementShortName">tCK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tCK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/SYSCLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">SYSCLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">SYSCLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/NUM_PHYSICAL_PARTS" type="array">
+      <obj_property name="ElementShortName">NUM_PHYSICAL_PARTS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_PHYSICAL_PARTS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/CLAMSHELL_PARTS" type="array">
+      <obj_property name="ElementShortName">CLAMSHELL_PARTS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLAMSHELL_PARTS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/ODD_PARTS" type="array">
+      <obj_property name="ElementShortName">ODD_PARTS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ODD_PARTS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/RANK_WIDTH" type="array">
+      <obj_property name="ElementShortName">RANK_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RANK_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/CS_WIDTH" type="array">
+      <obj_property name="ElementShortName">CS_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CS_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/ODT_WIDTH" type="array">
+      <obj_property name="ElementShortName">ODT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ODT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/CA_MIRROR" type="array">
+      <obj_property name="ElementShortName">CA_MIRROR[23:0]</obj_property>
+      <obj_property name="ObjectShortName">CA_MIRROR[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/MRS" type="array">
+      <obj_property name="ElementShortName">MRS[2:0]</obj_property>
+      <obj_property name="ObjectShortName">MRS[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/REF" type="array">
+      <obj_property name="ElementShortName">REF[2:0]</obj_property>
+      <obj_property name="ObjectShortName">REF[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/PRE" type="array">
+      <obj_property name="ElementShortName">PRE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PRE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/ACT" type="array">
+      <obj_property name="ElementShortName">ACT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ACT[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/WR" type="array">
+      <obj_property name="ElementShortName">WR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/RD" type="array">
+      <obj_property name="ElementShortName">RD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/ZQC" type="array">
+      <obj_property name="ElementShortName">ZQC[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ZQC[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/NOP" type="array">
+      <obj_property name="ElementShortName">NOP[2:0]</obj_property>
+      <obj_property name="ObjectShortName">NOP[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/CONFIGURED_DENSITY" type="array">
+      <obj_property name="ElementShortName">CONFIGURED_DENSITY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CONFIGURED_DENSITY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/CLKIN_PERIOD_NS" type="other">
+      <obj_property name="ElementShortName">CLKIN_PERIOD_NS</obj_property>
+      <obj_property name="ObjectShortName">CLKIN_PERIOD_NS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/IDX" type="array">
+      <obj_property name="ElementShortName">IDX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/top_inst/data" type="array">
+      <obj_property name="ElementShortName">data[511:0]</obj_property>
+      <obj_property name="ObjectShortName">data[511:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/top_inst/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/top_inst/c0_ddr4_app_rd_data_valid" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_rd_data_valid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_rd_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/top_inst/c0_ddr4_app_wdf_data" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_app_wdf_data[511:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_wdf_data[511:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/top_inst/c0_ddr4_app_rd_data" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_app_rd_data[511:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_rd_data[511:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb_top/top_inst/c0_ddr4_app_rd_data_end" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_rd_data_end</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_rd_data_end</obj_property>
+   </wvobject>
+</wave_config>
