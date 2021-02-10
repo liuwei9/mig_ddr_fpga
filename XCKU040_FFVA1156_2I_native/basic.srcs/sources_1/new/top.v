@@ -58,10 +58,21 @@ localparam DATA_WIDTH = 10'd512;
  wire [DATA_WIDTH - 1'b1 : 0] c0_ddr4_app_wdf_data ;
  wire [DATA_WIDTH - 1'b1 : 0] c0_ddr4_app_rd_data ;
 
+localparam CMD_WRITE = 3'b000;
+localparam CMD_READ = 3'b001;
 
+localparam IDLE = 2'b00;
+localparam WRITE = 2'b01;
+localparam WAIT = 2'b10;
+localparam READ = 2'b11;
+reg [1:0] state;
 
+reg [DATA_WIDTH - 1'b1 : 0] data;
+reg [ADDR_WIDTH - 1'b1 : 0] addr;
 
-
+assign  c0_ddr4_app_cmd = (state == WRITE) ? CMD_WRITE : CMD_READ;
+assign c0_ddr4_app_en = (state == WRITE) ? (c0_ddr4_app_wdf_rdy & c0_ddr4_app_rdy) : ((state == READ) & c0_ddr4_app_rdy);
+assign c0_ddr4_app_wdf_end = c0_ddr4_app_wdf_wren;
 
 
 
